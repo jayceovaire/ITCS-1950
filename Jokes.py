@@ -27,8 +27,7 @@ def jokes():
             response_three = input()
 
     print("interrupting cow.")
-    response_four = input()
-    print(response_four, end='')
+    response_four = input(end='')
     print("-MOO!")
 
 
