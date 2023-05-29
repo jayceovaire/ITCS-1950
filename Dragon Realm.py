@@ -9,7 +9,7 @@ def display_intro():
     The second dragon is greedy and hungry, and will eat you on sight.
     The third dragon is sleeping on his mound of gold and jewels.
     The fourth dragon has a fiery temper.
-    The fifth dragon loves to teach children about sharing.''')
+    The fifth dragon loves to sing and teach.''')
     print()
 
 def choose_cave():
@@ -27,8 +27,7 @@ def check_cave(chosen_cave):
     time.sleep(2)
     print('It is dark and spooky...')
     time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
-    print()
+    print('A large dragon jumps out in front of you! He opens his jaws and...\n')
     time.sleep(2)
 
 
@@ -37,14 +36,16 @@ def check_cave(chosen_cave):
         'Burns you to a crisp!',
         'Sings a song to you about how sharing is caring',
         'Yawns, turns around, and goes back to sleep',
-        "Gives you a lecture on how random.choice() would work much better for this problem"
+        "Gives you a lecture on how random.choice() would work much better for this game."
     ]
 
     cave = random.randint(1, 5)
     if chosen_cave != str(cave):
         print(dragon_response[cave - 1])
+        print()
     else:
         print("Gives you his treasure!")
+        print()
 
 play_again = 'yes'
 
@@ -54,5 +55,5 @@ while play_again in ['yes', 'YES', 'y', 'Y']:
     cave_number = choose_cave()
     check_cave(cave_number)
 
-    print('Do you want to play again? (yes to play again, any other key to exit)')
+    print('Do you want to play again? (yes to play again, or any other key + Enter to exit)')
     play_again = input()
