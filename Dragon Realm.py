@@ -18,7 +18,7 @@ def choose_cave():
         if cave in ['1', '2', '3', '4', '5']:
             return cave
         else:
-            "You need to choose one of the five caves in front of you. Enter a number between 1 and 5"
+            print("You need to choose one of the five caves in front of you. Enter a number between 1 and 5")
 
 
 
@@ -32,32 +32,19 @@ def check_cave(chosen_cave):
     time.sleep(2)
 
 
-    dragon1 = ''
-    dragon2 = ''
-    dragon3 = ''
-    dragon4 = ''
-    dragon5 = ''
-
     dragon_response = [
-        'Gives you his treasure!',
         'Gobbles you down in one bite!',
         'Burns you to a crisp!',
         'Sings a song to you about how sharing is caring',
         'Yawns, turns around, and goes back to sleep',
+        "Gives you a lecture on how random.choice() would work much better for this problem"
     ]
-    dragon_list = [dragon1, dragon2, dragon3, dragon4, dragon5]
-    cave_list = ['1', '2', '3', '4', '5']
 
-    for dragon in dragon_list:
-        response = random.choice(dragon_response)
-        dragon_response.remove(response)
-        cave = random.choice(cave_list)
-        cave_list.remove(cave)
-        if cave == chosen_cave:
-            print(response)
-            print()
-
-
+    cave = random.randint(1, 5)
+    if chosen_cave != str(cave):
+        print(dragon_response[cave - 1])
+    else:
+        print("Gives you his treasure!")
 
 play_again = 'yes'
 
