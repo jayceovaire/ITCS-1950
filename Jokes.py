@@ -1,4 +1,3 @@
-import time
 
 def jokes():
 
@@ -16,21 +15,21 @@ def jokes():
     else:
         print("A black hole!")
 
-
     print('Knock Knock')
     response_three = input()
     if response_three == "MOO":
         print("HOW DID YOU KNOW THAT?!")
-        print("THIS ISNT FAIR I QUIT. GOODBYE!")
+        print("THIS ISN'T FAIR I QUIT. GOODBYE!")
         exit()
     else:
-        response_four = ''
-        while response_four not in ["Who's there?", "who's there?", "Who's there", "who's there"]:
+        while response_three not in ["Who's there?", "Who's there", "who's there?", "who's there"]:
             print("I'm waiting...(hint: (who's there)")
-            response_four = input()
+            response_three = input()
 
     print("interrupting cow.")
-    time.sleep(3)
-    print('-MOO!')
+    response_four = input()
+    print(response_four, end='')
+    print("-MOO!")
+
 
 jokes()
